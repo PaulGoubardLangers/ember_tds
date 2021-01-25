@@ -4,7 +4,7 @@ import { tracked } from '@glimmer/tracking';
 
 export default class Ex1Controller extends Controller {
   @tracked content = 'default';
-  @tracked info = 'information sur votre texte';
+  @tracked info;
   MAX = 100;
 
   get size() {
@@ -19,16 +19,6 @@ export default class Ex1Controller extends Controller {
     } else {
       return '<fc green>alert</fc>';
     }
-  }
-
-  @action
-  clear() {
-    console.log('contenu effacé');
-  }
-
-  @action
-  update() {
-    console.log('mise à jour');
   }
 
   @action
